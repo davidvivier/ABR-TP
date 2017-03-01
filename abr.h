@@ -19,5 +19,6 @@ void parcours_RGD(Noeud *racine);
 
 void suppression(Noeud **racine, int valeur);
 
+void supMax(int *max, Noeud *arbre);
 
 #endif
