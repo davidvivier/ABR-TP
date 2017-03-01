@@ -4,7 +4,7 @@
 
 typedef struct Noeud
 {
-	int val;
+	int valeur;
 	struct Noeud* gauche;
 	struct Noeud* droite;
 } Noeud;

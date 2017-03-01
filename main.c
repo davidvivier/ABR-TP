@@ -26,8 +26,10 @@ int main() {
 	}
 
 	parcours_GRD(arbre);
+	printf("\n");
 
 	parcours_RGD(arbre);
+	printf("\n");
 
 	for(i=0; i< 13; i++)
 	{
