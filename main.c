@@ -25,20 +25,22 @@ int main() {
 		ajout(&arbre, tab_inser[i]); // on ajoute toutes les valeurs à l'ABR
 	}
 
+	printf("parcours_GRD :\n");
 	parcours_GRD(arbre);
-	printf("\n");
+	printf("\n\n");
 
-	//parcours_RGD(arbre);
-	//printf("\n");
+	printf("parcours_RGD :\n");
+	parcours_RGD(arbre);
+	printf("\n\n");
 
-	suppression(&arbre, 5);
+	//suppression(&arbre, 5);
 
-	parcours_GRD(arbre);
-	printf("\n");
 
 	for(i=0; i< 13; i++)
 	{
-		//suppression(&arbre, tab_suppr[i]);
+		suppression(&arbre, tab_suppr[i]);
+		parcours_GRD(arbre);
+		printf("\n");
 	}
 
 

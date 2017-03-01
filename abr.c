@@ -26,10 +26,12 @@ void ajout(Noeud **racine, int valeur) {
 void parcours_GRD(Noeud *racine) {
 
 	if (racine->gauche != NULL) {
+		//printf(" g:");
 		parcours_GRD(racine->gauche);
 	}
 	printf("%d ", racine->valeur);
 	if (racine->droite != NULL) {
+		//printf(" d:");
 		parcours_GRD(racine->droite);
 	}
 }
@@ -78,8 +80,28 @@ void supMax(int *max, Noeud *arbre) {
 	if (arbre->droite != NULL) {
 		supMax(max, arbre->droite);
 	} else {
+		// on récupère la valeur qui nous intéresse
 		*max = arbre->valeur;
-		printf("au bout de supMax() : arbre->gauche %d:\n", arbre->gauche);
-		arbre = arbre->gauche;
+
+
+		// on remplace par le noeud de gauche
+		// (cela ne fonctionne pas encore correctement.)
+
+		/*
+		printf("au bout de supMax() :\n");
+		printf("   arbre->valeur : %d\n", arbre->valeur);
+		printf("   arbre->gauche : %d\n", arbre->gauche);
+		*/
+		//free(arbre);
+
+		if (arbre->gauche != NULL) {
+			arbre->valeur = (arbre->gauche)->valeur;
+			arbre->droite = (arbre->gauche)->droite;
+			arbre->gauche = (arbre->gauche)->gauche;
+		} else {
+
+		}
+		//arbre = arbre->gauche;
+		//printf("   arbre : %d\n", arbre);
 	}
 }
