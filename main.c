@@ -17,7 +17,7 @@ int main() {
 
 	int tab_inser[] = {15,10,25 , 5,12,20,33,1,6,11,13,17,22}; // tableau qui contient les éléments à insérer
 	int tab_suppr[] = {10,5, 20,33,6,1,17,22,13,15,25,12,11}; // valeurs à supprimer dans un ordre aléatoire
-	int taille_tab = 13;
+	//int taille_tab = 13;
 	int i = 0;
 
 	for(i=0; i< 13; i++)

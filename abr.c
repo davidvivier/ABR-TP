@@ -8,6 +8,7 @@
 void ajout(Noeud **racine, int valeur) {
 	
 	if (*racine == NULL) {
+		// on a trouvé où ajouter la valeur
 		Noeud *nouveau = malloc(sizeof(Noeud));
 		nouveau->gauche = NULL;
 		nouveau->droite = NULL;
@@ -52,8 +53,10 @@ void suppression(Noeud **racine, int valeur) {
 	} else {
 
 		if ( valeur < (*racine)->valeur ) {
+			// l'élément est à gauche
 			suppression(&(*racine)->gauche, valeur);
 		} else if ( valeur > (*racine)->valeur ) {
+			// l'élément est à droite
 			suppression(&(*racine)->droite, valeur);
 		} else {
 			// l'élément a été trouvé
