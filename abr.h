@@ -17,7 +17,7 @@ void parcours_RGD(Noeud *racine);
 
 //void insertion_iterative(Noeud **racine, int valeur);
 
-void supression(Noeud **racine, int valeur);
+void suppression(Noeud **racine, int valeur);
 
 
 #endif
